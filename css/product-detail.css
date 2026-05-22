@@ -1,0 +1,476 @@
+/* ================= RESET ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #eef5ff;
+
+    color: #111;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    width: 90%;
+
+    max-width: 1300px;
+
+    margin: 40px auto;
+
+}
+
+/* ================= DETAIL CARD ================= */
+
+.detail-card{
+
+    display: flex;
+
+    gap: 50px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 2px solid #bbdefb;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1);
+
+    margin-bottom: 60px;
+
+    flex-wrap: wrap;
+
+}
+
+/* ================= IMAGE ================= */
+
+.detail-image{
+
+    flex: 1;
+
+    min-width: 300px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.detail-image img{
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border: 2px solid #90caf9;
+
+    border-radius: 20px;
+
+}
+
+/* ================= INFO ================= */
+
+.detail-info{
+
+    flex: 1;
+
+    min-width: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.detail-info h1{
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    color: #1565c0;
+
+}
+
+/* ================= CATEGORY ================= */
+
+.category{
+
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+}
+
+/* ================= PRICE ================= */
+
+.price{
+
+    color: #e53935;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+
+    font-weight: bold;
+
+}
+
+/* ================= DESC ================= */
+
+.desc{
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    color: #444;
+
+}
+
+/* ================= BUTTON ================= */
+
+.back-btn,
+.detail-btn{
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+/* ================= BACK ================= */
+
+.back-btn{
+
+    width: fit-content;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2196f3,
+            #0d47a1
+        );
+
+    color: white;
+
+}
+
+.back-btn:hover{
+
+    transform: translateY(-3px);
+
+    opacity: 0.92;
+
+}
+
+/* ================= DETAIL ================= */
+
+.detail-btn{
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #42a5f5,
+            #1565c0
+        );
+
+    color: white;
+
+    margin-top: 15px;
+
+}
+
+.detail-btn:hover{
+
+    opacity: 0.92;
+
+    transform: translateY(-2px);
+
+}
+
+/* ================= SLIDER ================= */
+
+.slider{
+
+    position: relative;
+
+    margin-top: 50px;
+
+}
+
+.slider h2{
+
+    margin-bottom: 25px;
+
+    font-size: 32px;
+
+    color: #1565c0;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.slider-container{
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+/* ================= WRAPPER ================= */
+
+.slider-wrapper{
+
+    overflow: hidden;
+
+    width: 100%;
+
+}
+
+/* ================= TRACK ================= */
+
+.slide-track{
+
+    display: flex;
+
+    gap: 20px;
+
+    transition: 0.5s;
+
+}
+
+/* ================= ITEM ================= */
+
+.slide-item{
+
+    min-width: 260px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 2px solid #bbdefb;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+
+}
+
+.slide-item:hover{
+
+    transform: translateY(-5px);
+
+}
+
+.slide-item img{
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border: 2px solid #90caf9;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+.slide-item p{
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    color: #1565c0;
+
+}
+
+.slide-item h3{
+
+    color: #e53935;
+
+    margin-bottom: 15px;
+
+}
+
+/* ================= SLIDER BUTTON ================= */
+
+.slider-btn{
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2196f3,
+            #0d47a1
+        );
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+
+}
+
+.slider-btn:hover{
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+
+    opacity: 0.92;
+
+}
+
+/* ================= LEFT ================= */
+
+.slider-btn.left{
+
+    left: -25px;
+
+}
+
+/* ================= RIGHT ================= */
+
+.slider-btn.right{
+
+    right: -25px;
+
+}
+
+/* ================= NOT FOUND ================= */
+
+.not-found{
+
+    text-align: center;
+
+    background: white;
+
+    padding: 60px;
+
+    border-radius: 20px;
+
+    border: 2px solid #bbdefb;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.not-found h1{
+
+    margin-bottom: 30px;
+
+    color: #1565c0;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+    .detail-card{
+
+        flex-direction: column;
+
+    }
+
+    .detail-info h1{
+
+        font-size: 30px;
+
+    }
+
+    .price{
+
+        font-size: 28px;
+
+    }
+
+    .slide-item{
+
+        min-width: 220px;
+
+    }
+
+    .slider-btn.left{
+
+        left: 5px;
+
+    }
+
+    .slider-btn.right{
+
+        right: 5px;
+
+    }
+
+}

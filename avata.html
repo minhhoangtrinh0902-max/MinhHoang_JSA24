@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân</title>
+
+    <link rel="stylesheet" href="./css/avata.css">
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <div class="profile-card">
+
+            <!-- AVATAR -->
+            <div class="avatar-box">
+
+                <img
+                    id="avatar"
+                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                    alt="avatar"
+                >
+
+            </div>
+
+            <!-- INFO -->
+            <div class="profile-info">
+
+                <h1>
+                    👤 Hồ Sơ Cá Nhân
+                </h1>
+
+                <div class="info-item">
+
+                    <span>Tên đăng nhập:</span>
+
+                    <p id="username">
+                        ---
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span>Email:</span>
+
+                    <p id="email">
+                        ---
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span>Vai trò:</span>
+
+                    <p id="role">
+                        User
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+            <div class="button-group">
+
+                <button
+                    onclick="goHome()"
+                    class="home-btn"
+                >
+                    Quay Lại 
+                </button>
+
+                <button
+                    onclick="goOrders()"
+                    class="orders-btn"
+                >
+                    📦 Đơn Hàng
+                </button>
+
+                <button
+                    onclick="logout()"
+                    class="logout-btn"
+                >
+                    🚪 Đăng Xuất
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/avata.js"></script>
+
+</body>
+</html>

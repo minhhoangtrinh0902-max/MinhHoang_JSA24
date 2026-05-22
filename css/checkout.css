@@ -1,0 +1,491 @@
+body{
+
+    margin:0;
+
+    background:#eef5ff;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:#111;
+
+}
+
+/* ================= TITLE ================= */
+
+h1{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    font-size:40px;
+
+    color:#1565c0;
+
+}
+
+/* ================= LAYOUT ================= */
+
+.checkout-container{
+
+    display:flex;
+
+    gap:30px;
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:30px auto;
+
+    align-items:flex-start;
+
+}
+
+/* ================= LEFT CART ================= */
+
+.checkout-cart{
+
+    width:350px;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    position:sticky;
+
+    top:20px;
+
+    border:2px solid #bbdefb;
+
+}
+
+/* ================= CART ITEM ================= */
+
+.cart-item{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:20px;
+
+    border-bottom:1px solid #e3f2fd;
+
+    padding-bottom:15px;
+
+}
+
+.cart-item img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:2px solid #90caf9;
+
+}
+
+.cart-item h3{
+
+    margin:0 0 10px;
+
+    font-size:18px;
+
+    color:#1565c0;
+
+}
+
+.cart-item p{
+
+    margin:0;
+
+    color:#e53935;
+
+    font-weight:bold;
+
+}
+
+/* ================= FORM ================= */
+
+.form{
+
+    flex:1;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    border:2px solid #bbdefb;
+
+    box-sizing:border-box;
+
+}
+
+/* ================= INPUT ================= */
+
+.form input[type="text"],
+.form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:2px solid #bbdefb;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+    outline:none;
+
+    transition:0.3s;
+
+}
+
+.form input[type="text"]:focus,
+.form textarea:focus{
+
+    border-color:#1976d2;
+
+    box-shadow:
+        0 0 5px rgba(33,150,243,0.4);
+
+}
+
+/* ================= TEXTAREA ================= */
+
+.form textarea{
+
+    height:120px;
+
+    resize:none;
+
+}
+
+/* ================= PAYMENT ================= */
+
+.payment-method{
+
+    margin-top:30px;
+
+}
+
+.payment-method h2{
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+    color:#1565c0;
+
+}
+
+/* ================= PAYMENT CARD ================= */
+
+.payment-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    width:100%;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    border:2px solid #bbdefb;
+
+    border-radius:18px;
+
+    background:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-sizing:border-box;
+
+}
+
+.payment-card:hover{
+
+    border-color:#1976d2;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+/* ================= RADIO ================= */
+
+.payment-card input[type="radio"]{
+
+    width:20px;
+
+    height:20px;
+
+    margin:0;
+
+    accent-color:#1976d2;
+
+    flex-shrink:0;
+
+}
+
+/* ================= LOGO ================= */
+
+.payment-logo{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    background:white;
+
+    padding:5px;
+
+    border:2px solid #e3f2fd;
+
+    flex-shrink:0;
+
+}
+
+/* ================= INFO ================= */
+
+.payment-info{
+
+    flex:1;
+
+}
+
+.payment-info h3{
+
+    margin:0 0 8px;
+
+    font-size:22px;
+
+    color:#1565c0;
+
+}
+
+.payment-info p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/* ================= ACTIVE ================= */
+
+.payment-card:has(input:checked){
+
+    border-color:#1976d2;
+
+    background:#e3f2fd;
+
+}
+
+/* ================= BUTTON ================= */
+
+.form button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2196f3,
+            #0d47a1
+        );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.form button:hover{
+
+    transform:translateY(-2px);
+
+    opacity:0.95;
+
+}
+
+/* ================= ORDER DETAILS ================= */
+
+.order-details-container{
+
+    max-width:800px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    border:2px solid #bbdefb;
+
+}
+
+/* ================= HEADER ================= */
+
+.order-header h1{
+
+    font-size:32px;
+
+    margin-bottom:5px;
+
+    text-align:left;
+
+    color:#1565c0;
+
+}
+
+.order-id{
+
+    color:#666;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+/* ================= INFO ROW ================= */
+
+.info-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #e3f2fd;
+
+}
+
+.info-label{
+
+    color:#666;
+
+    font-weight:500;
+
+}
+
+/* ================= STATUS ================= */
+
+.status-badge{
+
+    background:#e3f2fd;
+
+    color:#1565c0;
+
+    padding:5px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+/* ================= PRODUCT IMAGE ================= */
+
+.product-preview{
+
+    margin-top:30px;
+
+    width:100%;
+
+    max-height:400px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:2px solid #90caf9;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .checkout-container{
+
+        flex-direction:column;
+
+    }
+
+    .checkout-cart{
+
+        width:100%;
+
+        position:static;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .payment-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}

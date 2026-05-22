@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* ================= CONTAINER ================= */
+
+.profile-container{
+    width: 100%;
+    padding: 20px;
+}
+
+.profile-card{
+    max-width: 700px;
+    margin: auto;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+/* ================= AVATAR ================= */
+
+.avatar-box{
+    margin-bottom: 25px;
+}
+
+.avatar-box img{
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    border: 5px solid #111;
+
+    object-fit: cover;
+}
+
+/* ================= TITLE ================= */
+
+.profile-info h1{
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
+/* ================= INFO ================= */
+
+.info-item{
+    background: #f8f8f8;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+.info-item span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.info-item p{
+    margin-top: 8px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* ================= BUTTON ================= */
+
+.button-group{
+    margin-top: 30px;
+
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.button-group button{
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.button-group button:hover{
+    transform: translateY(-3px);
+}
+
+.home-btn{
+    background: #0d6efd;
+}
+
+.orders-btn{
+    background: #198754;
+}
+
+.logout-btn{
+    background: crimson;
+}

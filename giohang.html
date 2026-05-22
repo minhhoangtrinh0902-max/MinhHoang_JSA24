@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Giỏ Hàng - MH Shoes Store
+    </title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="./css/giohang.css"
+    >
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- ICON -->
+    <link
+        rel="apple-touch-icon"
+        href="https://mms.img.susercontent.com/vn-11134216-820l4-mere45bu6qyt7b_tn"
+    >
+
+    <link
+        rel="icon"
+        sizes="32x32"
+        href="https://mms.img.susercontent.com/vn-11134216-820l4-mere45bu6qyt7b_tn"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <div id="header"></div>
+
+    <!-- ================= TITLE ================= -->
+
+    <h2 class="title">
+
+        Giỏ Hàng Của Bạn
+
+    </h2>
+
+    <!-- ================= CART ================= -->
+
+    <section class="buy-box">
+
+        <!-- CHECK ALL -->
+        <div class="cart-top">
+
+            <label class="select-all-label">
+
+                <input
+                    type="checkbox"
+                    id="select-all"
+                    onchange="toggleSelectAll(this.checked)"
+                >
+
+                Chọn tất cả
+
+            </label>
+
+        </div>
+
+        <!-- CART LIST -->
+        <div id="cart-list"></div>
+
+        <!-- CHECKOUT -->
+        <div class="checkout-bar">
+
+            <div
+                id="total-price"
+                class="total-price"
+            >
+                Tổng: 0 VND
+            </div>
+
+            <button
+                class="checkout-btn"
+                onclick="goCheckout()"
+            >
+                Thanh toán
+            </button>
+
+        </div>
+
+        <!-- CLEAR -->
+        <button
+            onclick="clearCart()"
+            class="clear-btn"
+        >
+            Xóa tất cả
+        </button>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+        <div id="footer"></div>
+
+    <!-- ================= JS ================= -->
+
+    <script src="./js/giohang.js"></script>
+    <script src="./js/header.js"></script>
+    <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="CbV7HbzSvStZoVcWgnF5d";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+
+</html>

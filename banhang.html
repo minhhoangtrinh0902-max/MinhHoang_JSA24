@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Bán Hàng - MH Shoes Store
+    </title>
+
+    <!-- ================= CSS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="./css/banhang.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/footer.css"
+    >
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <!-- ================= ICON ================= -->
+
+    <link
+        rel="apple-touch-icon"
+        href="https://mms.img.susercontent.com/vn-11134216-820l4-mere45bu6qyt7b_tn"
+    >
+
+    <link
+        rel="icon"
+        sizes="32x32"
+        href="https://mms.img.susercontent.com/vn-11134216-820l4-mere45bu6qyt7b_tn"
+    >
+
+    <link
+        rel="icon"
+        sizes="64x64"
+        href="https://mms.img.susercontent.com/vn-11134216-820l4-mere45bu6qyt7b_tn"
+    >
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <div id="header"></div>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= TITLE ================= -->
+
+        <h2 class="title">
+            🔥 Sản Phẩm Bán Chạy
+        </h2>
+
+        <!-- ================= SEARCH ================= -->
+
+        <div class="search-box">
+
+            <!-- ================= FILTER ================= -->
+
+            <select
+                id="category-filter"
+                onchange="filterByCategory(this.value)"
+            >
+
+                <option value="all">
+                    Tất cả danh mục
+                </option>
+
+                <option value="lifestyle">
+                    Thời trang
+                </option>
+
+                <option value="running">
+                    Chạy bộ
+                </option>
+
+                <option value="football">
+                    Bóng đá
+                </option>
+
+                <option value="basketball">
+                    Bóng rổ
+                </option>
+
+                <option value="accessories">
+                    Phụ kiện
+                </option>
+
+            </select>
+
+            <!-- ================= SEARCH INPUT ================= -->
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Tìm sản phẩm..."
+            >
+
+        </div>
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section
+            class="products"
+            id="products"
+        >
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <div id="footer"></div>
+
+    <!-- ================= TOAST ================= -->
+
+    <div id="toastBox"></div>
+
+    <!-- ================= JS ================= -->
+
+    <script src="./js/banhang.js"></script>
+
+    <script src="./js/header.js"></script>
+
+    <!-- ================= CHATBASE ================= -->
+
+    <script>(function () {
+
+            if (
+                !window.chatbase ||
+                window.chatbase("getState") !== "initialized"
+            ) {
+
+                window.chatbase = (...arguments) => {
+
+                    if (!window.chatbase.q) {
+
+                        window.chatbase.q = [];
+
+                    }
+
+                    window.chatbase.q.push(arguments);
+
+                };
+
+                window.chatbase = new Proxy(
+
+                    window.chatbase,
+
+                    {
+
+                        get(target, prop) {
+
+                            if (prop === "q") {
+
+                                return target.q;
+
+                            }
+
+                            return (...args) =>
+                                target(prop, ...args);
+
+                        }
+
+                    }
+
+                );
+
+            }
+
+            const onLoad = function () {
+
+                const script =
+                    document.createElement("script");
+
+                script.src =
+                    "https://www.chatbase.co/embed.min.js";
+
+                script.id =
+                    "CbV7HbzSvStZoVcWgnF5d";
+
+                script.domain =
+                    "www.chatbase.co";
+
+                document.body.appendChild(script);
+
+            };
+
+            if (
+                document.readyState === "complete"
+            ) {
+
+                onLoad();
+
+            }
+
+            else {
+
+                window.addEventListener(
+                    "load",
+                    onLoad
+                );
+
+            }
+
+        })();
+
+    </script>
+
+</body>
+
+</html>

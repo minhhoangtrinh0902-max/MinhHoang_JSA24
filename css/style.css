@@ -1,0 +1,298 @@
+/* ================= RESET ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+
+body{
+
+    font-family:
+        'Segoe UI',
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb
+        );
+
+    color:#333;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    width:100%;
+
+    max-width:850px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:2px solid #90caf9;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+
+}
+
+.container:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ================= HEADER ================= */
+
+header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+/* ================= AVATAR ================= */
+
+.avatar{
+
+    width:160px;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #2196f3;
+
+    margin-bottom:20px;
+
+    transition:0.3s;
+
+}
+
+.avatar:hover{
+
+    transform:
+        scale(1.05)
+        rotate(2deg);
+
+}
+
+/* ================= TITLE ================= */
+
+header h1{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+    color:#1565c0;
+
+}
+
+header p{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* ================= CONTENT ================= */
+
+.content h2{
+
+    margin-top:25px;
+
+    margin-bottom:10px;
+
+    color:#1976d2;
+
+}
+
+.content p{
+
+    margin-bottom:15px;
+
+    line-height:1.8;
+
+}
+
+.content ul{
+
+    padding-left:20px;
+
+}
+
+.content li{
+
+    margin-bottom:10px;
+
+}
+
+/* ================= BUTTON GROUP ================= */
+
+.button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:30px 0;
+
+    flex-wrap:wrap;
+
+}
+
+/* ================= BUTTON ================= */
+
+.btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+/* ================= HOME BUTTON ================= */
+
+.btn-home{
+
+    background:
+        linear-gradient(
+            135deg,
+            #42a5f5,
+            #1565c0
+        );
+
+    color:white;
+
+}
+
+.btn-home:hover{
+
+    transform:translateY(-3px);
+
+    opacity:0.92;
+
+}
+
+/* ================= EMAIL BUTTON ================= */
+
+.btn-email{
+
+    background:
+        linear-gradient(
+            135deg,
+            #64b5f6,
+            #1e88e5
+        );
+
+    color:white;
+
+}
+
+.btn-email:hover{
+
+    transform:translateY(-3px);
+
+    opacity:0.92;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    padding-top:20px;
+
+    border-top:1px solid #bbdefb;
+
+    color:#666;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:600px){
+
+    .container{
+
+        padding:25px;
+
+    }
+
+    header h1{
+
+        font-size:26px;
+
+    }
+
+    .avatar{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+    }
+
+}

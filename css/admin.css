@@ -1,0 +1,610 @@
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY ================= */
+
+body{
+
+    min-height:100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3f2fd,
+            #bbdefb,
+            #90caf9
+        );
+
+    background-attachment:fixed;
+
+}
+
+/* ================= HEADER ================= */
+
+header{
+
+    background:
+        linear-gradient(
+            135deg,
+            #1976d2,
+            #0d47a1
+        );
+
+    color:white;
+
+    padding:22px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.15);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+/* ================= HEADER TITLE ================= */
+
+header h1{
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.logout-btn{
+
+    padding:12px 18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ef5350;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#d32f2f;
+
+    transform:
+        translateY(-2px)
+        scale(1.03);
+
+}
+
+/* ================= LAYOUT ================= */
+
+.container{
+
+    width:95%;
+
+    max-width:1300px;
+
+    margin:35px auto;
+
+    display:grid;
+
+    grid-template-columns:350px 1fr;
+
+    gap:25px;
+
+}
+
+/* ================= BOX ================= */
+
+.form-box,
+.table-box{
+
+    background:
+        rgba(255,255,255,0.92);
+
+    backdrop-filter:blur(10px);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    animation:fadeIn 0.5s ease;
+
+}
+
+/* ================= FADE ================= */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ================= TITLE ================= */
+
+h2{
+
+    margin-bottom:22px;
+
+    color:#1565c0;
+
+    font-size:26px;
+
+}
+
+/* ================= INPUT GROUP ================= */
+
+.input-group{
+
+    margin-bottom:18px;
+
+}
+
+/* ================= LABEL ================= */
+
+label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-weight:bold;
+
+    color:#1565c0;
+
+}
+
+/* ================= INPUT ================= */
+
+input,
+select{
+
+    width:100%;
+
+    padding:13px;
+
+    border:
+        1px solid #90caf9;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:0.3s;
+
+    background:white;
+
+}
+
+/* ================= INPUT FOCUS ================= */
+
+input:focus,
+select:focus{
+
+    border-color:#1976d2;
+
+    box-shadow:
+        0 0 10px rgba(25,118,210,0.25);
+
+}
+
+/* ================= SAVE BUTTON ================= */
+
+.btn-save{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2196f3,
+            #1565c0
+        );
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+/* ================= SAVE HOVER ================= */
+
+.btn-save:hover{
+
+    transform:
+        translateY(-2px)
+        scale(1.01);
+
+    opacity:0.96;
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,0.15);
+
+}
+
+/* ================= TABLE ================= */
+
+.table-box{
+
+    overflow-x:auto;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+}
+
+/* ================= TABLE CELL ================= */
+
+th,
+td{
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+/* ================= TABLE HEADER ================= */
+
+th{
+
+    background:
+        linear-gradient(
+            135deg,
+            #1976d2,
+            #1565c0
+        );
+
+    color:white;
+
+    font-size:15px;
+
+    position:sticky;
+
+    top:0;
+
+}
+
+/* ================= TABLE DATA ================= */
+
+td{
+
+    border-bottom:
+        1px solid #e3f2fd;
+
+    background:white;
+
+}
+
+/* ================= TABLE ROW HOVER ================= */
+
+tr:hover td{
+
+    background:#f5fbff;
+
+    transition:0.3s;
+
+}
+
+/* ================= IMAGE ================= */
+
+td img{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    border:
+        2px solid #90caf9;
+
+    transition:0.3s;
+
+}
+
+td img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* ================= BUTTON ================= */
+
+button{
+
+    padding:9px 14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+/* ================= EDIT ================= */
+
+.edit{
+
+    background:#42a5f5;
+
+}
+
+.edit:hover{
+
+    background:#1e88e5;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= DELETE ================= */
+
+.delete{
+
+    background:#ef5350;
+
+}
+
+.delete:hover{
+
+    background:#d32f2f;
+
+    transform:translateY(-2px);
+
+}
+
+/* ================= LOADING ================= */
+
+.loading-overlay{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+        rgba(0,0,0,0.4);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+/* ================= LOADER ================= */
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border:
+        6px solid rgba(255,255,255,0.3);
+
+    border-top:
+        6px solid white;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+/* ================= SPIN ================= */
+
+@keyframes spin{
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1976d2,
+            #0d47a1
+        );
+
+    color:white;
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    opacity:0;
+
+    transform:
+        translateY(20px);
+
+    transition:0.4s;
+
+    z-index:9999;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+/* ================= SHOW TOAST ================= */
+
+.toast.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:600px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+        padding:18px;
+
+    }
+
+    header h1{
+
+        font-size:24px;
+
+    }
+
+    .form-box,
+    .table-box{
+
+        padding:18px;
+
+    }
+
+    th,
+    td{
+
+        padding:10px;
+
+        font-size:14px;
+
+    }
+
+    td img{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .toast{
+
+        right:15px;
+
+        left:15px;
+
+        bottom:20px;
+
+        text-align:center;
+
+    }
+
+}

@@ -1,0 +1,292 @@
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY ================= */
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #001f54,
+            #003b8b,
+            #0052cc,
+            #0080ff
+        );
+
+    background-size:400% 400%;
+
+    animation:bgMove 10s ease infinite;
+
+    overflow:hidden;
+
+}
+
+/* ================= BACKGROUND ANIMATION ================= */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+
+    width:100%;
+
+    max-width:430px;
+
+    padding:45px 35px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+
+    animation:
+        floatBox 3s ease-in-out infinite;
+
+}
+
+/* ================= FLOAT EFFECT ================= */
+
+@keyframes floatBox{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* ================= TITLE ================= */
+
+.container h1{
+
+    font-size:48px;
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+}
+
+/* ================= TEXT ================= */
+
+.container p{
+
+    color:#dbeafe;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+/* ================= BUTTON GROUP ================= */
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+/* ================= BUTTON ================= */
+
+.buttons button{
+
+    flex:1;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+    transition:0.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ================= USER BUTTON ================= */
+
+.user-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #00d2ff,
+            #3a7bd5
+        );
+
+}
+
+/* ================= ADMIN BUTTON ================= */
+
+.admin-btn{
+
+    background:
+        linear-gradient(
+            135deg,
+            #005bea,
+            #1e3cff
+        );
+
+}
+
+/* ================= BUTTON HOVER ================= */
+
+.buttons button:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.25);
+
+}
+
+/* ================= BUTTON CLICK ================= */
+
+.buttons button:active{
+
+    transform:scale(0.96);
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .container{
+
+        padding:40px 28px;
+
+    }
+
+    .container h1{
+
+        font-size:38px;
+
+    }
+
+    .container p{
+
+        font-size:16px;
+
+    }
+
+    .buttons button{
+
+        font-size:16px;
+
+        padding:15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .container{
+
+        padding:30px 22px;
+
+        border-radius:20px;
+
+    }
+
+    .container h1{
+
+        font-size:30px;
+
+    }
+
+    .container p{
+
+        font-size:15px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+    .buttons button{
+
+        width:100%;
+
+        font-size:15px;
+
+        padding:14px;
+
+    }
+
+}
