@@ -15,13 +15,36 @@ body{
 
     background:
         linear-gradient(
-            135deg,
+            -45deg,
             #e3f2fd,
             #bbdefb,
-            #90caf9
+            #90caf9,
+            #64b5f6
         );
 
-    background-attachment:fixed;
+    background-size:400% 400%;
+
+    animation:bgMove 12s ease infinite;
+
+    overflow-x:hidden;
+
+}
+
+/* ================= BACKGROUND ANIMATION ================= */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
 
 }
 
@@ -32,9 +55,11 @@ header{
     background:
         linear-gradient(
             135deg,
-            #1976d2,
-            #0d47a1
+            rgba(25,118,210,0.95),
+            rgba(13,71,161,0.95)
         );
+
+    backdrop-filter:blur(10px);
 
     color:white;
 
@@ -47,7 +72,7 @@ header{
     align-items:center;
 
     box-shadow:
-        0 4px 15px rgba(0,0,0,0.15);
+        0 5px 20px rgba(0,0,0,0.15);
 
     position:sticky;
 
@@ -69,6 +94,35 @@ header h1{
 
 }
 
+/* ================= HEADER ACTION ================= */
+
+.header-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/* ================= PRODUCT COUNT ================= */
+
+.product-count{
+
+    background:
+        rgba(255,255,255,0.15);
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    backdrop-filter:blur(10px);
+
+}
+
 /* ================= LOGOUT BUTTON ================= */
 
 .logout-btn{
@@ -77,9 +131,14 @@ header h1{
 
     border:none;
 
-    border-radius:10px;
+    border-radius:12px;
 
-    background:#ef5350;
+    background:
+        linear-gradient(
+            135deg,
+            #ef5350,
+            #d32f2f
+        );
 
     color:white;
 
@@ -91,11 +150,12 @@ header h1{
 
     transition:0.3s;
 
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.15);
+
 }
 
 .logout-btn:hover{
-
-    background:#d32f2f;
 
     transform:
         translateY(-2px)
@@ -127,22 +187,22 @@ header h1{
 .table-box{
 
     background:
-        rgba(255,255,255,0.92);
+        rgba(255,255,255,0.88);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(15px);
 
     padding:25px;
 
-    border-radius:20px;
+    border-radius:22px;
 
     box-shadow:
-        0 8px 25px rgba(0,0,0,0.08);
+        0 8px 30px rgba(0,0,0,0.08);
 
     animation:fadeIn 0.5s ease;
 
 }
 
-/* ================= FADE ================= */
+/* ================= ANIMATION ================= */
 
 @keyframes fadeIn{
 
@@ -150,7 +210,8 @@ header h1{
 
         opacity:0;
 
-        transform:translateY(20px);
+        transform:
+            translateY(20px);
 
     }
 
@@ -158,7 +219,8 @@ header h1{
 
         opacity:1;
 
-        transform:translateY(0);
+        transform:
+            translateY(0);
 
     }
 
@@ -210,7 +272,7 @@ select{
     border:
         1px solid #90caf9;
 
-    border-radius:12px;
+    border-radius:14px;
 
     outline:none;
 
@@ -230,7 +292,37 @@ select:focus{
     border-color:#1976d2;
 
     box-shadow:
-        0 0 10px rgba(25,118,210,0.25);
+        0 0 12px rgba(25,118,210,0.25);
+
+    transform:scale(1.01);
+
+}
+
+/* ================= IMAGE PREVIEW ================= */
+
+.preview-box{
+
+    margin:20px 0;
+
+    text-align:center;
+
+}
+
+.preview-box img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:
+        3px solid #90caf9;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.1);
 
 }
 
@@ -240,11 +332,11 @@ select:focus{
 
     width:100%;
 
-    padding:14px;
+    padding:15px;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:14px;
 
     background:
         linear-gradient(
@@ -265,18 +357,38 @@ select:focus{
 
 }
 
-/* ================= SAVE HOVER ================= */
-
 .btn-save:hover{
 
     transform:
         translateY(-2px)
         scale(1.01);
 
-    opacity:0.96;
-
     box-shadow:
-        0 6px 15px rgba(0,0,0,0.15);
+        0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+/* ================= TABLE TOP ================= */
+
+.table-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    gap:15px;
+
+}
+
+/* ================= SEARCH ================= */
+
+#searchInput{
+
+    max-width:260px;
 
 }
 
@@ -296,7 +408,7 @@ table{
 
     overflow:hidden;
 
-    border-radius:14px;
+    border-radius:16px;
 
 }
 
@@ -326,30 +438,36 @@ th{
 
     font-size:15px;
 
-    position:sticky;
-
-    top:0;
-
 }
 
 /* ================= TABLE DATA ================= */
 
 td{
 
+    background:white;
+
     border-bottom:
         1px solid #e3f2fd;
 
-    background:white;
+}
+
+/* ================= ROW HOVER ================= */
+
+tr{
+
+    transition:0.3s;
 
 }
 
-/* ================= TABLE ROW HOVER ================= */
+tr:hover{
+
+    transform:scale(1.01);
+
+}
 
 tr:hover td{
 
     background:#f5fbff;
-
-    transition:0.3s;
 
 }
 
@@ -363,7 +481,7 @@ td img{
 
     object-fit:cover;
 
-    border-radius:12px;
+    border-radius:14px;
 
     border:
         2px solid #90caf9;
@@ -386,7 +504,7 @@ button{
 
     border:none;
 
-    border-radius:8px;
+    border-radius:10px;
 
     cursor:pointer;
 
@@ -402,13 +520,16 @@ button{
 
 .edit{
 
-    background:#42a5f5;
+    background:
+        linear-gradient(
+            135deg,
+            #42a5f5,
+            #1e88e5
+        );
 
 }
 
 .edit:hover{
-
-    background:#1e88e5;
 
     transform:translateY(-2px);
 
@@ -418,13 +539,16 @@ button{
 
 .delete{
 
-    background:#ef5350;
+    background:
+        linear-gradient(
+            135deg,
+            #ef5350,
+            #d32f2f
+        );
 
 }
 
 .delete:hover{
-
-    background:#d32f2f;
 
     transform:translateY(-2px);
 
@@ -445,13 +569,15 @@ button{
     height:100%;
 
     background:
-        rgba(0,0,0,0.4);
+        rgba(0,0,0,0.45);
 
     display:none;
 
     justify-content:center;
 
     align-items:center;
+
+    backdrop-filter:blur(4px);
 
     z-index:9999;
 
@@ -461,12 +587,12 @@ button{
 
 .loader{
 
-    width:70px;
+    width:75px;
 
-    height:70px;
+    height:75px;
 
     border:
-        6px solid rgba(255,255,255,0.3);
+        6px solid rgba(255,255,255,0.25);
 
     border-top:
         6px solid white;
@@ -508,7 +634,7 @@ button{
 
     padding:14px 22px;
 
-    border-radius:12px;
+    border-radius:14px;
 
     font-weight:bold;
 
@@ -522,7 +648,7 @@ button{
     z-index:9999;
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,0.2);
+        0 8px 20px rgba(0,0,0,0.2);
 
 }
 
@@ -571,6 +697,40 @@ button{
 
     }
 
+    .header-actions{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .product-count{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .logout-btn{
+
+        width:100%;
+
+    }
+
+    .table-top{
+
+        flex-direction:column;
+
+    }
+
+    #searchInput{
+
+        max-width:100%;
+
+    }
+
     .form-box,
     .table-box{
 
@@ -595,11 +755,19 @@ button{
 
     }
 
+    .preview-box img{
+
+        width:140px;
+
+        height:140px;
+
+    }
+
     .toast{
 
-        right:15px;
-
         left:15px;
+
+        right:15px;
 
         bottom:20px;
 
