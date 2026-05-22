@@ -450,10 +450,6 @@ function logout(){
             "admin_login"
         );
 
-        // TOAST
-        showToast(
-            "Đang đăng xuất..."
-        );
 
         // REDIRECT
         setTimeout(() => {
