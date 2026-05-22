@@ -435,7 +435,37 @@ window.addEventListener(
     render
 
 );
+// ================= LOGOUT =================
 
+function logout(){
+
+    // SHOW LOADING
+    showLoading();
+
+    // FAKE DELAY
+    setTimeout(() => {
+
+        // REMOVE LOGIN
+        localStorage.removeItem(
+            "admin_login"
+        );
+
+        // TOAST
+        showToast(
+            "Đang đăng xuất..."
+        );
+
+        // REDIRECT
+        setTimeout(() => {
+
+            window.location.href =
+                "admin-login.html";
+
+        },800);
+
+    },1000);
+
+}
 // ================= INIT =================
 
 render();
